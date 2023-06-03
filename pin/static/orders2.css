@@ -1,0 +1,9 @@
+.orders .order .box h4{
+    display: inline-block;
+    margin: 0px 132px 0px 17px;
+    color: black;
+    width: 94px;
+}
+.orders .order .box{
+    height: 33px;
+}

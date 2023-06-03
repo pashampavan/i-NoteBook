@@ -1,0 +1,74 @@
+extends head.pug 
+block style 
+    style 
+        include ../static/entry.css
+        include ../static/account.css
+    script 
+        include ../static/account.js
+block front 
+    section.nav 
+        .logo 
+            img(src='https://vce.ac.in/img/vlogo%20-%20Copy.gif')
+            i(style="fontsize=50px", class="fa fa-bank")
+            h5 PIN BANK OF VASAVI
+        ul 
+            li 
+                a(href="/") home
+            li 
+                a(href="#") about us
+            li 
+                a(href="#") contact
+    section.account
+        h1 
+            |   Account details 
+        .details 
+            h4 name:   #{name}
+            h4 email:   #{email}
+            h4 rollNo: #{rollNo}
+            h4 dob:   #{date}
+            h4 savings:   #{savings}
+            .a
+                a(href=`/orders?rollNo=${rollNo}&password=${password}` ) orders
+            button.btn2(onclick="show()") transaction history
+            button.btn2(onclick="show2()") services
+            .s#s
+                section.service#services
+                    form(action=`/transfer2?rollNo=${rollNo}&password=${password}` method="post" id="form")
+                        button(type="submit") money transfor
+                    form(action=`/canteen?rollNo=${rollNo}&password=${password}` method="post")
+                        button(type="submit") canteen
+                    form(action=`/stationary?rollNo=${rollNo}&password=${password}` method="post")
+                        button(type="submit") stationary 
+                    form(action=`/juicePoint?rollNo=${rollNo}&password=${password}` method="post")
+                        button(type="submit") juice point
+    
+    section.history#history
+        .type 
+            h3 transaction type
+            h3 name 
+            h3 amount 
+            h3 date and time 
+        each x in history
+            .box(style="color:white") 
+                h4 #{x.type} 
+                h4 #{x.name} 
+                h3 #{x.price}/-
+                h4 #{x.time}
+          
+        //- h1 our services
+        //- .i 
+        //-     .box
+               
+            
+        //-     .box 
+                
+        //-     .box 
+                
+        //-     .box 
+                
+    script(type='text/javascript')
+        let rollNo=#{rollNo};
+        let history=#{history};
+        let password=#{password};
+    
+

@@ -1,0 +1,83 @@
+extends head 
+block style 
+    style 
+        include ../static/orders.css
+        include ../static/entry.css
+block nav 
+    script(type='text/javascript')
+        let rollNo=#{rollNo};
+        let password=#{password};
+    section.nav 
+        .logo 
+            img(src='https://vce.ac.in/img/vlogo%20-%20Copy.gif')
+            i(style="fontsize=50px", class="fa fa-bank")
+            h5 PIN BANK OF VASAVI
+        ul 
+            li 
+                a(href="/") home
+            li 
+                a(href="#") about us
+            li 
+                a(href="/update") contact
+    .orders 
+        h2 cafetaria 
+        .order
+            .type 
+                h3 item 
+                h3 price 
+                h3 order 
+                h3 name 
+                h3 rollNo
+                h3 redeem
+            each i,index in canteen
+                .box 
+                    li=index
+                    h4  #{i.item}
+                    h4.h4 #{i.price}/-
+                    h4  #{i.id}
+                    h4 #{i.name}
+                    h4 #{i.rollNo}
+                    form(action=`/delete?name=canteen&rollNo=${rollNo}&password=${password}` method='post')
+                        input(type='text',name="id",value=i.id)
+                        button.btn(type='submit')   Accept 
+        h2 stationary
+        .order
+            .type 
+                h3 item 
+                h3 price 
+                h3 order 
+                h3 name 
+                h3 rollNo
+                h3 redeem 
+            each i, index in stationary
+                .box
+                    li=index
+                    
+                    h4 #{i.item}
+                    h4 #{i.price}/-
+                    h4  #{i.id}
+                    h4 #{i.name}
+                    h4 #{i.rollNo}
+                    form(action=`/delete?name=stationary&rollNo=${rollNo}&password=${password}` method='post')
+                        input(type='text',name="id",value=i.id)
+                        button.btn(type='submit')   Accept 
+        h2 juicePoint
+        .order
+            .type 
+                h3 item 
+                h3 price 
+                h3 order 
+                h3 name 
+                h3 rollNo
+                h3 redeem
+            each i, index in juicePoint 
+                .box
+                    li=index
+                    h4 #{i.item}
+                    h4  #{i.price}/-
+                    h4 #{i.id}
+                    h4 #{i.name}
+                    h4 #{i.rollNo}
+                    form(action=`/delete?name=juicePoint&rollNo=${rollNo}&password=${password}` method='post')
+                        input(type='text',name="id",value=i.id)
+                        button.btn(type='submit')   Accept 

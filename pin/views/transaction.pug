@@ -1,0 +1,21 @@
+extends head.pug 
+block style
+    style
+        //- include ../static/front.css
+        include ../static/entry.css
+block front
+    section.nav 
+        .logo 
+            img(src='https://vce.ac.in/img/vlogo%20-%20Copy.gif')
+            i(style="fontsize=50px", class="fa fa-bank")
+            h5 PIN BANK OF VASAVI
+        ul 
+            li 
+                a(href="/") home
+            li 
+                a(href="#") about us
+            li 
+                a(href="/update") contact
+    .banner 
+        h2 Transaction successfull____#{amt}/- 
+        h2 Transaction id____#{id}

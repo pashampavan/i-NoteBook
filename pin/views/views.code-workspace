@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "views",
+			"path": "../../express/views"
+		},
+		{
+			"name": "mongoUse",
+			"path": ".."
+		},
+		{
+			"name": "static",
+			"path": "../../express/static"
+		}
+	],
+	"settings": {}
+}

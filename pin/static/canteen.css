@@ -1,0 +1,81 @@
+.items
+{
+    /* display: flex; */
+    border: 2px black solid;
+    border-radius: 8px;
+
+}
+h1{
+    text-align: center;
+}
+.s{
+    display: "none";
+}
+.items .i{
+    /* display: flex; */
+}
+.items .item{
+    border: 1px gray solid;
+    border-radius: 5px;
+    /* background-color: white; */
+    color: aliceblue;
+    margin: 0px;
+    padding: 4px 20px;
+}
+.items .item{
+
+}
+.items .item form{
+    display: inline-block;
+}
+.items .item form button{
+    height: 40px;
+    margin: 0px;
+}
+.items  .type
+{
+    background-color: rgb(213, 21, 21);
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.items  h3,h4{
+    display: inline-block;
+    margin: 3px 171px 3px 45px;
+    color: black;
+    width: 121px;
+}
+.i .item .h4{
+    color: green;
+}
+.item img{
+    height: 30px;
+    width: 30px;
+}
+.item .img{
+    display: inline-block;
+    transition-property: all .5s ease-in-out;
+}
+.item .img:hover
+{
+    margin-left:70px ;
+    transform: translate(100px,100px);
+    transform: scale(8);
+    /* transform: rotate(365deg); */
+}
+.btn {
+    display: block;
+    border: 2px gray solid;
+    margin: 23px auto;
+    padding: 5px 22px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+.btn:hover{
+    background-color: rgb(203, 32, 32);
+    color: white;
+}
+.btn4 , .btn6 , .btn8 , .btn10{
+ display: none;
+}
+.item:hover{
+    transform: scale(1.01);
+}
