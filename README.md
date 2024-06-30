@@ -1,4 +1,4 @@
-#I-Notebook
+# I-Notebook
 
 <p align="center">
   This is website is usefull for users to have thier accounts to upload,update, acess and delete thier notes on cloud. Built with <a href='https://react.dev'>React</a>,<a href='https://www.mongodb.com/'>MongoDB Atlas</a>, <a href='https://getbootstrap.com/'>Bootstrap</a> and <a href='https://nodejs.org/'>Node.js</a>
